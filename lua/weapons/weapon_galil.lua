@@ -1,0 +1,30 @@
+AddCSLuaFile()
+
+SWEP.Base = "weapon_csbase"
+SWEP.Spawnable = true
+
+SWEP.PrintName = "Galil"
+SWEP.Category = "Counter-Strike: Source2"
+SWEP.Slot = 2
+
+SWEP.ViewModel = "models/weapons/cstrike/c_rif_galil.mdl"
+SWEP.WorldModel = "models/weapons/w_rif_galil.mdl"
+SWEP.HoldType = "ar2"
+SWEP.UseHands = true
+
+SWEP.Primary.Sound = "Weapon_Galil.Single"
+SWEP.Primary.Damage = 30
+SWEP.Primary.NumShots = 1
+SWEP.Primary.Delay = 60 / 666
+SWEP.Primary.ClipSize = 35
+SWEP.Primary.DefaultClip = 90
+SWEP.Primary.Automatic = true
+SWEP.Primary.Ammo = "AR2"
+
+SWEP.Primary.Cone = 0.0125
+SWEP.Primary.Recoil = {}
+SWEP.Primary.Recoil.MinAng = Angle(0.5, -0.15, 0)
+SWEP.Primary.Recoil.MaxAng = Angle(0.6, 0.15, 0)
+SWEP.Primary.Recoil.Punch = 1
+
+list.Add("NPCUsableWeapons", {class = "weapon_galil", title = SWEP.PrintName})
