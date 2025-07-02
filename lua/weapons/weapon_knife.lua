@@ -48,9 +48,23 @@ function SWEP:DoHit(secondary)
         end
 
         if IsValid(ent) then
+            local damage = secondary and 65 or 20
+
             if ent:IsPlayer() or ent:IsNPC() then
                 self:EmitSound(secondary and "Weapon_Knife.Stab" or "Weapon_Knife.Hit")
                 self:SendWeaponAnim(secondary and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK)
+
+                if secondary and SERVER then
+                    local eyeangles = owner:EyeAngles()
+                    eyeangles.p = 0
+
+                    local eyeangles2 = ent:EyeAngles()
+                    eyeangles2.p = 0
+
+                    if eyeangles:Forward():Dot(eyeangles2:Forward()) >= 0.7 then
+                        damage = damage * 3
+                    end
+                end
             else
                 self:EmitSound("Weapon_Knife.HitWall")
                 self:SendWeaponAnim(secondary and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK)
@@ -58,9 +72,9 @@ function SWEP:DoHit(secondary)
 
             if SERVER then
                 local dmg = DamageInfo()
-                dmg:SetDamage(secondary and 50 or 25)
-                dmg:SetDamageType(DMG_SLASH)
-                dmg:SetDamageForce(trace.Normal * 1000)
+                dmg:SetDamage(damage)
+                dmg:SetDamageType(DMG_CLUB)
+                dmg:SetDamageForce(trace.Normal * (damage * 500))
                 dmg:SetDamagePosition(trace.HitPos)
                 dmg:SetAttacker(owner)
                 dmg:SetInflictor(ent)
