@@ -36,14 +36,16 @@ function SWEP:DoHit(secondary)
     else
         local ent = trace.Entity
 
-        local effect = EffectData()
-        effect:SetEntity(ent)
-        effect:SetOrigin(trace.HitPos)
-        effect:SetStart(trace.StartPos)
-        effect:SetSurfaceProp(trace.SurfaceProps)
-        effect:SetHitBox(trace.HitBox)
-        effect:SetDamageType(DMG_SLASH)
-        util.Effect("Impact", effect, false)
+        if IsFirstTimePredicted() then
+            local effect = EffectData()
+            effect:SetEntity(ent)
+            effect:SetOrigin(trace.HitPos)
+            effect:SetStart(trace.StartPos)
+            effect:SetSurfaceProp(trace.SurfaceProps)
+            effect:SetHitBox(trace.HitBox)
+            effect:SetDamageType(DMG_SLASH)
+            util.Effect("Impact", effect, false)
+        end
 
         if IsValid(ent) then
             if ent:IsPlayer() or ent:IsNPC() then
