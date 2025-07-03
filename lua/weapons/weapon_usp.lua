@@ -27,4 +27,4 @@ SWEP.Primary.Recoil.MinAng = Angle(0.7, -0.15, 0)
 SWEP.Primary.Recoil.MaxAng = Angle(0.9, 0.15, 0)
 SWEP.Primary.Recoil.Punch = 0.6
 
-list.Add("NPCUsableWeapons", {class = "weapon_ump", title = SWEP.PrintName})
+list.Add("NPCUsableWeapons", {class = "weapon_usp", title = SWEP.PrintName})
