@@ -20,7 +20,7 @@ SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 1.5
 SWEP.Primary.ClipSize = 10
 SWEP.Primary.DefaultClip = 10
-SWEP.Primary.Automatic = true
+SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "XBowBolt"
 
 SWEP.Primary.Cone = 0.001
