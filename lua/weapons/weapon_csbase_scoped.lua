@@ -58,6 +58,7 @@ if CLIENT then
             surface.DrawRect(w + dw, 0, dw, h)
 
             surface.DrawTexturedRect(dw, 0, w, h)
+            return true
         end
 	end
 end
