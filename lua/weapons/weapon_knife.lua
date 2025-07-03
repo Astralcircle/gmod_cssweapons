@@ -19,11 +19,10 @@ function SWEP:DoHit(secondary)
     owner:LagCompensation(true)
 
     local eyepos = owner:EyePos()
-    local aimvector = owner:GetAimVector()
 
     local trace = util.TraceLine({
         start = eyepos,
-        endpos = eyepos + aimvector * 48,
+        endpos = eyepos + owner:GetAimVector() * 48,
         filter = owner
     })
 
@@ -52,7 +51,7 @@ function SWEP:DoHit(secondary)
 
             if ent:IsPlayer() or ent:IsNPC() then
                 self:EmitSound(secondary and "Weapon_Knife.Stab" or "Weapon_Knife.Hit")
-                self:SendWeaponAnim(secondary and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK)
+                self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
 
                 if secondary and SERVER then
                     local eyeangles = owner:EyeAngles()
@@ -67,7 +66,7 @@ function SWEP:DoHit(secondary)
                 end
             else
                 self:EmitSound("Weapon_Knife.HitWall")
-                self:SendWeaponAnim(secondary and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK)
+                self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
             end
 
             if SERVER then
@@ -87,13 +86,9 @@ function SWEP:DoHit(secondary)
         end
     end
 
-    if secondary then
-        self:SetNextPrimaryFire(CurTime() + 1)
-        self:SetNextSecondaryFire(CurTime() + 1)
-    else
-        self:SetNextPrimaryFire(CurTime() + 0.4)
-        self:SetNextSecondaryFire(CurTime() + 0.4)
-    end
+    local time = CurTime() + (secondary and 1 or 0.4)
+    self:SetNextPrimaryFire(time)
+    self:SetNextSecondaryFire(time)
 end
 
 function SWEP:PrimaryAttack()
