@@ -1,4 +1,5 @@
 SWEP.Base = "weapon_csbase"
+SWEP.ScopeZoom = {}
 DEFINE_BASECLASS("weapon_csbase")
 
 function SWEP:SetupDataTables()
@@ -8,17 +9,19 @@ end
 function SWEP:SecondaryAttack()
     local owner = self:GetOwner()
     local index = self:GetScopeIndex() + 1
-    local scale = self.ScopeZoom and self.ScopeZoom[index]
+    local scale = self.ScopeZoom[index]
 
     if scale then
-        owner:SetFOV(owner:GetFOV() / scale, 0.1)
         self:SetScopeIndex(index)
     else
-        owner:SetFOV(0, 0.1)
         self:SetScopeIndex(0)
     end
 
     self:EmitSound("Default.Zoom")
+end
+
+function SWEP:TranslateFOV(fov)
+    return fov / (self.ScopeZoom[self:GetScopeIndex()] or 1)
 end
 
 if CLIENT then
