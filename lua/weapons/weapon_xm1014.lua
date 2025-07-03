@@ -4,7 +4,7 @@ SWEP.Base = "weapon_csbase_shotgun"
 SWEP.Spawnable = true
 
 SWEP.PrintName = "XM1014"
-SWEP.Category = "Counter-Strike: Source2"
+SWEP.Category = "Counter-Strike: Source"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_shot_xm1014.mdl"

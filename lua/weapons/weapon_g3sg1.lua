@@ -4,7 +4,7 @@ SWEP.Base = "weapon_csbase_scoped"
 SWEP.Spawnable = true
 
 SWEP.PrintName = "G3SG1"
-SWEP.Category = "Counter-Strike: Source2"
+SWEP.Category = "Counter-Strike: Source"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_g3sg1.mdl"

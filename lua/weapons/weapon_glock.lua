@@ -4,7 +4,7 @@ SWEP.Base = "weapon_csbase"
 SWEP.Spawnable = true
 
 SWEP.PrintName = "Glock-18"
-SWEP.Category = "Counter-Strike: Source2"
+SWEP.Category = "Counter-Strike: Source"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_glock18.mdl"

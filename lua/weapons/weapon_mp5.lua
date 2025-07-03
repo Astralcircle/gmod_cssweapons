@@ -4,7 +4,7 @@ SWEP.Base = "weapon_csbase"
 SWEP.Spawnable = true
 
 SWEP.PrintName = "MP5"
-SWEP.Category = "Counter-Strike: Source2"
+SWEP.Category = "Counter-Strike: Source"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_mp5.mdl"

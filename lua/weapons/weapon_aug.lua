@@ -4,7 +4,7 @@ SWEP.Base = "weapon_csbase_scoped"
 SWEP.Spawnable = true
 
 SWEP.PrintName = "AUG"
-SWEP.Category = "Counter-Strike: Source2"
+SWEP.Category = "Counter-Strike: Source"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_aug.mdl"
