@@ -31,11 +31,7 @@ end
 
 function SWEP:PrimaryAttack()
     if self:GetReloadTime() ~= 0 then
-        self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_FINISH)
-        self:SetNextPrimaryFire(CurTime() + self:SequenceDuration())
         self:SetReloadTime(0)
-
-        return
     end
 
     BaseClass.PrimaryAttack(self)
