@@ -1,6 +1,7 @@
 SWEP.Base = "weapon_csbase"
-SWEP.ScopeZoom = {}
 DEFINE_BASECLASS("weapon_csbase")
+
+SWEP.ScopeZoom = {}
 
 function SWEP:SetupDataTables()
     self:NetworkVar("Int", 0, "ScopeIndex")
@@ -18,6 +19,21 @@ function SWEP:SecondaryAttack()
     end
 
     self:EmitSound("Default.Zoom")
+end
+
+function SWEP:Deploy()
+    self:SetScopeIndex(0)
+    return BaseClass.Deploy(self)
+end
+
+function SWEP:Holster()
+    self:SetScopeIndex(0)
+    return BaseClass.Holster(self)
+end
+
+function SWEP:Reload()
+    self:SetScopeIndex(0)
+    return BaseClass.Reload(self)
 end
 
 function SWEP:TranslateFOV(fov)
