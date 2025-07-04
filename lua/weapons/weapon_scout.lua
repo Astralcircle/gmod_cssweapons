@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_snip_scout.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_scout.mdl"
 SWEP.HoldType = "ar2"
 
-
 SWEP.ScopeZoom = {2.25, 9}
 SWEP.UseScope = true
 SWEP.Primary.Sound = "Weapon_Scout.Single"

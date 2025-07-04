@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_rif_ak47.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl"
 SWEP.HoldType = "ar2"
 
-
 SWEP.Primary.Sound = "Weapon_AK47.Single"
 SWEP.Primary.Damage = 36
 SWEP.Primary.NumShots = 1

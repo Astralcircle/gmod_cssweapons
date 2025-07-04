@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_smg_mac10.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_mac10.mdl"
 SWEP.HoldType = "pistol"
 
-
 SWEP.Primary.Sound = "Weapon_MAC10.Single"
 SWEP.Primary.Damage = 29
 SWEP.Primary.NumShots = 1

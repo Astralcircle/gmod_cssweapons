@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_mach_m249para.mdl"
 SWEP.WorldModel = "models/weapons/w_mach_m249para.mdl"
 SWEP.HoldType = "ar2"
 
-
 SWEP.Primary.Sound = "Weapon_M249.Single"
 SWEP.Primary.Damage = 35
 SWEP.Primary.NumShots = 1

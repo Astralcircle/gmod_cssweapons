@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_pist_fiveseven.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_fiveseven.mdl"
 SWEP.HoldType = "pistol"
 
-
 SWEP.Primary.Sound = "Weapon_FiveSeven.Single"
 SWEP.Primary.Damage = 25
 SWEP.Primary.NumShots = 1

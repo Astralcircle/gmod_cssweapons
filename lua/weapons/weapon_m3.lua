@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_shot_m3super90.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.HoldType = "shotgun"
 
-
 SWEP.Primary.Sound = "Weapon_M3.Single"
 SWEP.Primary.Damage = 26
 SWEP.Primary.NumShots = 9

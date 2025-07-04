@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_pist_glock18.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.HoldType = "pistol"
 
-
 SWEP.Primary.Sound = "Weapon_Glock.Single"
 SWEP.Primary.Damage = 25
 SWEP.Primary.NumShots = 1

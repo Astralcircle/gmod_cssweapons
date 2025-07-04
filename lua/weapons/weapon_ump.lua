@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_smg_ump45.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_ump45.mdl"
 SWEP.HoldType = "smg"
 
-
 SWEP.Primary.Sound = "Weapon_UMP45.Single"
 SWEP.Primary.Damage = 30
 SWEP.Primary.NumShots = 1

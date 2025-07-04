@@ -11,7 +11,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_rif_galil.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_galil.mdl"
 SWEP.HoldType = "ar2"
 
-
 SWEP.Primary.Sound = "Weapon_Galil.Single"
 SWEP.Primary.Damage = 30
 SWEP.Primary.NumShots = 1
