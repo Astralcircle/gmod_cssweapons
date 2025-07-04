@@ -10,7 +10,7 @@ SWEP.Slot = 1
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_elite.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_elite.mdl"
 SWEP.HoldType = "duel"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_ELITE.Single"
 SWEP.Primary.Damage = 45

@@ -10,7 +10,7 @@ SWEP.Slot = 1
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_deagle.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_deagle.mdl"
 SWEP.HoldType = "revolver"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_DEagle.Single"
 SWEP.Primary.Damage = 54

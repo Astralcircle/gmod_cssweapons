@@ -10,7 +10,7 @@ SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.HoldType = "ar2"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_M4A1.Single"
 SWEP.Primary.Damage = 33

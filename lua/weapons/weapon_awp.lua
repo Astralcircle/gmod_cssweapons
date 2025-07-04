@@ -10,7 +10,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_awp.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 SWEP.HoldType = "ar2"
-SWEP.UseHands = true
+
 
 SWEP.ScopeZoom = {2.25, 9}
 SWEP.UseScope = true

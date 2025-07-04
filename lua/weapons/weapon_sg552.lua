@@ -10,7 +10,7 @@ SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_sg552.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_sg552.mdl"
 SWEP.HoldType = "ar2"
-SWEP.UseHands = true
+
 
 SWEP.ScopeZoom = {3}
 SWEP.UseScope = false

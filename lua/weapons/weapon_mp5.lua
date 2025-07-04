@@ -10,7 +10,7 @@ SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_mp5.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_mp5.mdl"
 SWEP.HoldType = "smg"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_MP5Navy.Single"
 SWEP.Primary.Damage = 26

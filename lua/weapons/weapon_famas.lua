@@ -10,7 +10,7 @@ SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_famas.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_famas.mdl"
 SWEP.HoldType = "ar2"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_FAMAS.Single"
 SWEP.Primary.Damage = 30

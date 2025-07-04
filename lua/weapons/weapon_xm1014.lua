@@ -10,7 +10,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/cstrike/c_shot_xm1014.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_xm1014.mdl"
 SWEP.HoldType = "shotgun"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_XM1014.Single"
 SWEP.Primary.Damage = 22

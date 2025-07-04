@@ -10,7 +10,7 @@ SWEP.Slot = 1
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_usp.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
 SWEP.HoldType = "pistol"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_USP.Single"
 SWEP.Primary.Damage = 34

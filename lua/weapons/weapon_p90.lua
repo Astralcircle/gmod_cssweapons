@@ -10,7 +10,7 @@ SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_p90.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_p90.mdl"
 SWEP.HoldType = "smg"
-SWEP.UseHands = true
+
 
 SWEP.Primary.Sound = "Weapon_P90.Single"
 SWEP.Primary.Damage = 26
