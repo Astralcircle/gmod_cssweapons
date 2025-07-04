@@ -27,15 +27,12 @@ end
 
 function SWEP:Deploy()
     self:SetReloadTime(0)
-    return true
+    return BaseClass.Deploy(self)
 end
 
 function SWEP:PrimaryAttack()
-    if self:GetReloadTime() ~= 0 then
-        self:SetReloadTime(0)
-    end
-
-    BaseClass.PrimaryAttack(self)
+    self:SetReloadTime(0)
+    return BaseClass.PrimaryAttack(self)
 end
 
 function SWEP:Reload()

@@ -26,11 +26,6 @@ function SWEP:Deploy()
     return BaseClass.Deploy(self)
 end
 
-function SWEP:Holster()
-    self:SetScopeIndex(0)
-    return BaseClass.Holster(self)
-end
-
 function SWEP:Reload()
     self:SetScopeIndex(0)
     return BaseClass.Reload(self)
