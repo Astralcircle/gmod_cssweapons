@@ -28,25 +28,25 @@ SWEP.Primary.Recoil.MaxAng = Angle(0.9, 0.15, 0)
 SWEP.Primary.Recoil.Punch = 0.6
 
 function SWEP:SetupDataTables()
-    self:NetworkVar("Bool", 0, "Silenced")
+	self:NetworkVar("Bool", 0, "Silenced")
 end
 
 function SWEP:SecondaryAttack()
-    local silenced = self:GetSilenced()
+	local silenced = self:GetSilenced()
 
-    if silenced then
-        self.Primary.Sound = "Weapon_USP.Single"
-        self:SendWeaponAnim(ACT_VM_DETACH_SILENCER)
-        self:SetSilenced(false)
-    else
-        self.Primary.Sound = "Weapon_USP.SilencedShot"
-        self:SendWeaponAnim(ACT_VM_ATTACH_SILENCER)
-        self:SetSilenced(true)
-    end
+	if silenced then
+		self.Primary.Sound = "Weapon_USP.Single"
+		self:SendWeaponAnim(ACT_VM_DETACH_SILENCER)
+		self:SetSilenced(false)
+	else
+		self.Primary.Sound = "Weapon_USP.SilencedShot"
+		self:SendWeaponAnim(ACT_VM_ATTACH_SILENCER)
+		self:SetSilenced(true)
+	end
 
-    local time = CurTime() + self:SequenceDuration()
-    self:SetNextPrimaryFire(time)
-    self:SetNextSecondaryFire(time)
+	local time = CurTime() + self:SequenceDuration()
+	self:SetNextPrimaryFire(time)
+	self:SetNextSecondaryFire(time)
 end
 
 function SWEP:ShootEffects()
@@ -61,15 +61,15 @@ function SWEP:Reload()
 end
 
 function SWEP:Deploy()
-    if self:GetSilenced() then self:SendWeaponAnim(ACT_VM_DRAW_SILENCED) end
-    return true
+	if self:GetSilenced() then self:SendWeaponAnim(ACT_VM_DRAW_SILENCED) end
+	return true
 end
 
 if CLIENT then
-    function SWEP:DrawWorldModel(flags)
-        if self:GetSilenced() then self:SetModel("models/weapons/w_pist_usp_silencer.mdl") end
-        self:DrawModel(flags)
-    end
+	function SWEP:DrawWorldModel(flags)
+		if self:GetSilenced() then self:SetModel("models/weapons/w_pist_usp_silencer.mdl") end
+		self:DrawModel(flags)
+	end
 end
 
 list.Add("NPCUsableWeapons", {class = "weapon_usp", title = SWEP.PrintName})

@@ -10,7 +10,7 @@ SWEP.HoldType = "pistol"
 SWEP.UseHands = true
 
 function SWEP:Initialize()
-    self:SetHoldType(self.HoldType)
+	self:SetHoldType(self.HoldType)
 end
 
 SWEP.Primary.Sound = "Weapon_AR2.Single"
@@ -31,27 +31,27 @@ SWEP.Primary.Recoil.Ratio = 0
 SWEP.m_WeaponDeploySpeed = 1
 
 function SWEP:PrimaryAttack()
-    if not self:CanPrimaryAttack() then return end
+	if not self:CanPrimaryAttack() then return end
 
-    local primary = self.Primary
+	local primary = self.Primary
 	self:EmitSound(primary.Sound)
 	self:ShootBullet(primary.Damage, primary.NumShots, primary.Cone, primary.Ammo)
-    self:SetNextPrimaryFire(CurTime() + primary.Delay)
+	self:SetNextPrimaryFire(CurTime() + primary.Delay)
 	self:TakePrimaryAmmo(1)
 
 	local owner = self:GetOwner()
 
 	if owner:IsPlayer() then
-        local recoil = primary.Recoil
-        local seed = owner:GetCurrentCommand():CommandNumber()
-        local x, y = -util.SharedRandom(seed, recoil.MinAng.p, recoil.MaxAng.p), util.SharedRandom(seed, recoil.MinAng.y, recoil.MaxAng.y)
+		local recoil = primary.Recoil
+		local seed = owner:GetCurrentCommand():CommandNumber()
+		local x, y = -util.SharedRandom(seed, recoil.MinAng.p, recoil.MaxAng.p), util.SharedRandom(seed, recoil.MinAng.y, recoil.MaxAng.y)
 
-        if CLIENT and IsFirstTimePredicted() then
-            owner:SetEyeAngles(owner:EyeAngles() + Angle(x * recoil.Punch, y * recoil.Punch, 0))
-        end
+		if CLIENT and IsFirstTimePredicted() then
+			owner:SetEyeAngles(owner:EyeAngles() + Angle(x * recoil.Punch, y * recoil.Punch, 0))
+		end
 
-        owner:ViewPunch(Angle(x, y, 0))
-    end
+		owner:ViewPunch(Angle(x, y, 0))
+	end
 end
 
 SWEP.Secondary.Ammo = "none"
@@ -60,5 +60,5 @@ SWEP.Secondary.DefaultClip = -1
 SWEP.Secondary.Automatic = false
 
 function SWEP:SecondaryAttack()
-    -- For overriding
+	-- For overriding
 end
