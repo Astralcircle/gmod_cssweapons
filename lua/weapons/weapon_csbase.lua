@@ -1,17 +1,19 @@
+AddCSLuaFile()
+
 SWEP.Spawnable = false
+
 SWEP.BounceWeaponIcon = false
 SWEP.DrawWeaponInfoBox = false
-SWEP.ViewModel = "models/weapons/cstrike/c_pist_deagle.mdl"
-SWEP.WorldModel = "models/weapons/w_pist_deagle.mdl"
-SWEP.HoldType = "pistol"
+
 SWEP.CSMuzzleFlashes = true
+SWEP.HoldType = "pistol"
 SWEP.UseHands = true
 
 function SWEP:Initialize()
     self:SetHoldType(self.HoldType)
 end
 
-SWEP.Primary.Sound = "Weapon_DEagle.Single"
+SWEP.Primary.Sound = "Weapon_AR2.Single"
 SWEP.Primary.Damage = 10
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.1

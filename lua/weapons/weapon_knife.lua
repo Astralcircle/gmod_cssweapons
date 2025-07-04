@@ -1,6 +1,13 @@
+AddCSLuaFile()
+
+SWEP.Spawnable = true
+
 SWEP.PrintName = "Knife"
 SWEP.Category = "Counter-Strike: Source"
-SWEP.Spawnable = true
+
+SWEP.BounceWeaponIcon = false
+SWEP.DrawWeaponInfoBox = false
+
 SWEP.ViewModel = "models/weapons/cstrike/c_knife_t.mdl"
 SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 SWEP.UseHands = true
