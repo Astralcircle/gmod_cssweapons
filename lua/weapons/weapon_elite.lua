@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "Dual Elites"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "s"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_elite.mdl"

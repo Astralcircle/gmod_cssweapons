@@ -5,6 +5,17 @@ SWEP.Spawnable = false
 SWEP.BounceWeaponIcon = false
 SWEP.DrawWeaponInfoBox = false
 
+if CLIENT then
+	surface.CreateFont("css_sweps_icons", {
+		font = "cs",
+		size = ScreenScale(55)
+	})
+
+	function SWEP:DrawWeaponSelection(x, y, w, h, alpha)
+		draw.SimpleText(self.IconSymbol or "", "css_sweps_icons", x + w / 2, y + h / 2, Color(255, 255, 50, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+	end
+end
+
 SWEP.CSMuzzleFlashes = true
 SWEP.HoldType = "pistol"
 SWEP.UseHands = true

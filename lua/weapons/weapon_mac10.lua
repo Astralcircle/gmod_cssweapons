@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "MAC-10"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "l"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_mac10.mdl"

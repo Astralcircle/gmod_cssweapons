@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "XM1014"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "]"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_shot_xm1014.mdl"

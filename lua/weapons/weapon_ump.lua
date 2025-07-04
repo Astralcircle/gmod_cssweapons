@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "UMP-45"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "q"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_ump45.mdl"

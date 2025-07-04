@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "P90"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "m"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_p90.mdl"

@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "USP-S"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "a"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_usp.mdl"

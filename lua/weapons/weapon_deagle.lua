@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "Desert Eagle"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "f"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_deagle.mdl"

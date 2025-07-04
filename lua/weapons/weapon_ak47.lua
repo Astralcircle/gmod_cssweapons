@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "AK-47"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "b"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_ak47.mdl"

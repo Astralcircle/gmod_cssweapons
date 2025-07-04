@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "MP5"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "x"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_mp5.mdl"

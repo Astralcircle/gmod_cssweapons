@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "M249"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "z"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_mach_m249para.mdl"

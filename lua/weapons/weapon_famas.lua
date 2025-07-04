@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "FAMAS"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "t"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_famas.mdl"

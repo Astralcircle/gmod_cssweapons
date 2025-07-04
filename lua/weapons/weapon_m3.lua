@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "M3 Super 90"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "k"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_shot_m3super90.mdl"

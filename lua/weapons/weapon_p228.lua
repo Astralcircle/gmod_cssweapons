@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "P228"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "y"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_p228.mdl"

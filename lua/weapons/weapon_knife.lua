@@ -8,6 +8,12 @@ SWEP.Category = "Counter-Strike: Source"
 SWEP.BounceWeaponIcon = false
 SWEP.DrawWeaponInfoBox = false
 
+if CLIENT then
+	function SWEP:DrawWeaponSelection(x, y, w, h, alpha)
+		draw.SimpleText("j", "css_sweps_icons", x + w / 2, y + h / 2, Color(255, 255, 50, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+	end
+end
+
 SWEP.ViewModel = "models/weapons/cstrike/c_knife_t.mdl"
 SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 SWEP.UseHands = true

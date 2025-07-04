@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "SG 550"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "o"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_sg550.mdl"

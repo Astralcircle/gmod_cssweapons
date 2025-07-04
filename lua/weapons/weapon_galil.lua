@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "Galil"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "v"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_galil.mdl"

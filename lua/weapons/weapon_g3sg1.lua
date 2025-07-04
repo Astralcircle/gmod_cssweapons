@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "G3SG1"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "i"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_g3sg1.mdl"

@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "AUG"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "e"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_aug.mdl"

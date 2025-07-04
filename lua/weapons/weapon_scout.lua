@@ -5,6 +5,7 @@ SWEP.Spawnable = true
 
 SWEP.PrintName = "Steyr Scout"
 SWEP.Category = "Counter-Strike: Source"
+SWEP.IconSymbol = "n"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_scout.mdl"
