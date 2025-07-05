@@ -1,4 +1,5 @@
-SWEP.Base = "weapon_csbase"
+AddCSLuaFile()
+
 DEFINE_BASECLASS("weapon_csbase")
 
 function SWEP:SetupDataTables()

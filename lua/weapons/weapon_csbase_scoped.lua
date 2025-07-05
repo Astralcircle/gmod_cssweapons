@@ -1,6 +1,6 @@
-SWEP.Base = "weapon_csbase"
-DEFINE_BASECLASS("weapon_csbase")
+AddCSLuaFile()
 
+DEFINE_BASECLASS("weapon_csbase")
 SWEP.ScopeZoom = {}
 
 function SWEP:SetupDataTables()

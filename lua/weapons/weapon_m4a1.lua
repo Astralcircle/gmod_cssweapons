@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.Base = "weapon_csbase"
+DEFINE_BASECLASS("weapon_csbase")
 SWEP.Spawnable = true
 
 SWEP.PrintName = "M4A1"
@@ -62,7 +62,7 @@ end
 
 function SWEP:Deploy()
 	if self:GetSilenced() then self:SendWeaponAnim(ACT_VM_DRAW_SILENCED) end
-	return true
+	return BaseClass.Deploy(self)
 end
 
 if CLIENT then
