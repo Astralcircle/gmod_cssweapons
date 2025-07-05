@@ -9,6 +9,8 @@ SWEP.BounceWeaponIcon = false
 SWEP.DrawWeaponInfoBox = false
 
 if CLIENT then
+	killicon.AddFont("weapon_knife", "css_sweps_killicons", "j", Color(255, 80, 0), 0.35)
+
 	function SWEP:DrawWeaponSelection(x, y, w, h, alpha)
 		draw.SimpleText("j", "css_sweps_icons", x + w / 2, y + h / 2, Color(255, 255, 50, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	end
@@ -89,7 +91,7 @@ function SWEP:DoHit(secondary)
 				dmg:SetDamageForce(trace.Normal * 10000)
 				dmg:SetDamagePosition(trace.HitPos)
 				dmg:SetAttacker(owner)
-				dmg:SetInflictor(ent)
+				dmg:SetInflictor(self)
 				dmg:SetWeapon(self)
 				ent:DispatchTraceAttack(dmg, trace)
 			end

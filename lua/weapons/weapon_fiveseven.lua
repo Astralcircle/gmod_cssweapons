@@ -27,4 +27,8 @@ SWEP.Primary.Recoil.MinAng = Angle(0.7, -0.15, 0)
 SWEP.Primary.Recoil.MaxAng = Angle(0.9, 0.15, 0)
 SWEP.Primary.Recoil.Punch = 0.6
 
+if CLIENT then
+	killicon.AddFont("weapon_fiveseven", "css_sweps_killicons", "u", Color(255, 80, 0), 0.4)
+end
+
 list.Add("NPCUsableWeapons", {class = "weapon_fiveseven", title = SWEP.PrintName})

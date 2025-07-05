@@ -66,6 +66,8 @@ function SWEP:Deploy()
 end
 
 if CLIENT then
+	killicon.AddFont("weapon_usp", "css_sweps_killicons", "a", Color(255, 80, 0), 0.4)
+
 	function SWEP:DrawWorldModel(flags)
 		if self:GetSilenced() then self:SetModel("models/weapons/w_pist_usp_silencer.mdl") end
 		self:DrawModel(flags)

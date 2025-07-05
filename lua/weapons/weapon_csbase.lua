@@ -11,6 +11,12 @@ if CLIENT then
 		size = math.min(ScreenScale(55), 165)
 	})
 
+	surface.CreateFont("css_sweps_killicons", {
+		font = "csd",
+		size = 64,
+		additive = true
+	})
+
 	function SWEP:DrawWeaponSelection(x, y, w, h, alpha)
 		draw.SimpleText(self.IconSymbol or "", "css_sweps_icons", x + w / 2, y + h / 2, Color(255, 255, 50, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	end

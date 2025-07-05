@@ -40,4 +40,8 @@ function SWEP:ShootEffects()
 	owner:SetAnimation(PLAYER_ATTACK1)
 end
 
+if CLIENT then
+	killicon.AddFont("weapon_elite", "css_sweps_killicons", "s", Color(255, 80, 0), 0.4)
+end
+
 list.Add("NPCUsableWeapons", {class = "weapon_elite", title = SWEP.PrintName})
