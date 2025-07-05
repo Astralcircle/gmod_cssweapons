@@ -8,7 +8,7 @@ SWEP.DrawWeaponInfoBox = false
 if CLIENT then
 	surface.CreateFont("css_sweps_icons", {
 		font = "cs",
-		size = ScreenScale(55)
+		size = math.min(ScreenScale(55), 165)
 	})
 
 	function SWEP:DrawWeaponSelection(x, y, w, h, alpha)
