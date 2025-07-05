@@ -44,10 +44,9 @@ function SWEP:Reload()
 		return
 	end
 
-	owner:SetAnimation(PLAYER_RELOAD)
-
 	if self:Clip1() < self:GetMaxClip1() and self:Ammo1() > 0 and self:GetReloadTime() == 0 then
 		self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_START)
+		owner:SetAnimation(PLAYER_RELOAD)
 
 		local time = CurTime() + self:SequenceDuration()
 		self:SetNextPrimaryFire(time)
