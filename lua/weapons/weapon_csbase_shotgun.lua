@@ -12,7 +12,7 @@ function SWEP:Think()
 
 	local reloadtime = self:GetReloadTime()
 
-	if reloadtime ~= 0 and reloadtime < CurTime() then
+	if reloadtime ~= 0 and reloadtime <= CurTime() then
 		if self:Clip1() < self:GetMaxClip1() and self:Ammo1() > 0 then
 			self:SendWeaponAnim(ACT_VM_RELOAD)
 			self:SetReloadTime(CurTime() + self:SequenceDuration())
@@ -44,7 +44,7 @@ function SWEP:Reload()
 		return
 	end
 
-	if self:GetNextPrimaryFire() < CurTime() and self:Clip1() < self:GetMaxClip1() and self:Ammo1() > 0 and self:GetReloadTime() == 0 then
+	if self:GetNextPrimaryFire() <= CurTime() and self:Clip1() < self:GetMaxClip1() and self:Ammo1() > 0 and self:GetReloadTime() == 0 then
 		self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_START)
 		owner:SetAnimation(PLAYER_RELOAD)
 
