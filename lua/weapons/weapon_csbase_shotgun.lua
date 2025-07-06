@@ -7,22 +7,17 @@ function SWEP:SetupDataTables()
 end
 
 function SWEP:Think()
-	local owner = self:GetOwner()
-	if not owner:IsValid() or not owner:IsPlayer() then return end
-
 	local reloadtime = self:GetReloadTime()
+	if reloadtime == 0 or reloadtime > CurTime() then return end
 
-	if reloadtime ~= 0 and reloadtime <= CurTime() then
-		if self:Clip1() < self:GetMaxClip1() and self:Ammo1() > 0 then
-			self:SendWeaponAnim(ACT_VM_RELOAD)
-			self:SetReloadTime(CurTime() + self:SequenceDuration())
-			owner:RemoveAmmo(1, self:GetPrimaryAmmoType())
-			self:SetClip1(self:Clip1() + 1)
-		else
-			self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_FINISH)
-			self:SetNextPrimaryFire(CurTime() + self:SequenceDuration())
-			self:SetReloadTime(0)
-		end
+	if self:Clip1() < self:GetMaxClip1() and self:Ammo1() > 0 then
+		self:SendWeaponAnim(ACT_VM_RELOAD)
+		self:SetReloadTime(CurTime() + self:SequenceDuration())
+		self:GetOwner():RemoveAmmo(1, self:GetPrimaryAmmoType())
+		self:SetClip1(self:Clip1() + 1)
+	else
+		self:SendWeaponAnim(ACT_SHOTGUN_RELOAD_FINISH)
+		self:SetReloadTime(0)
 	end
 end
 
