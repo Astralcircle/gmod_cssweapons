@@ -27,14 +27,9 @@ SWEP.Primary.Recoil.MinAng = Angle(0.7, -0.4, 0)
 SWEP.Primary.Recoil.MaxAng = Angle(0.9, 0.4, 0)
 SWEP.Primary.Recoil.Punch = 0.6
 
-function SWEP:SetupDataTables()
-	self:NetworkVar("Bool", 0, "AltGun")
-end
-
 function SWEP:ShootEffects()
 	local owner = self:GetOwner()
-	self:SendWeaponAnim(self:GetAltGun() and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK)
-	self:SetAltGun(not self:GetAltGun())
+	self:SendWeaponAnim(self:Clip1() % 2 == 0 and ACT_VM_SECONDARYATTACK or ACT_VM_PRIMARYATTACK)
 
 	owner:MuzzleFlash()
 	owner:SetAnimation(PLAYER_ATTACK1)
