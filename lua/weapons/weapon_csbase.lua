@@ -44,8 +44,26 @@ SWEP.Primary.Recoil = {}
 SWEP.Primary.Recoil.MinAng = angle_zero
 SWEP.Primary.Recoil.MaxAng = angle_zero
 SWEP.Primary.Recoil.Punch = 0
-SWEP.Primary.Recoil.Ratio = 0
 SWEP.m_WeaponDeploySpeed = 1
+
+function SWEP:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer)
+	local owner = self:GetOwner()
+
+	owner:FireBullets({
+		Num = num_bullets,
+		Src = owner:GetShootPos(),
+		Dir = (owner:EyeAngles() + owner:GetViewPunchAngles() * 2):Forward(),
+		Spread = Vector(aimcone, aimcone, 0),
+		Tracer = tracer or 5,
+		Force = force or 1,
+		Damage = damage,
+		AmmoType = ammo_type or self.Primary.Ammo,
+		Attacker = owner,
+		Inflictor = self
+	})
+
+	self:ShootEffects()
+end
 
 function SWEP:PrimaryAttack()
 	if not self:CanPrimaryAttack() then return end
