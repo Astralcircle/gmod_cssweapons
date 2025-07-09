@@ -70,7 +70,7 @@ function SWEP:PrimaryAttack()
 
 	local primary = self.Primary
 	self:EmitSound(primary.Sound)
-	self:ShootBullet(primary.Damage, primary.NumShots, primary.Cone, primary.Ammo)
+	self:ShootBullet(primary.Damage, primary.NumShots, primary.Cone, primary.Ammo, primary.Force, primary.Tracer)
 	self:SetNextPrimaryFire(CurTime() + primary.Delay)
 	self:TakePrimaryAmmo(1)
 

@@ -32,17 +32,11 @@ function SWEP:SetupDataTables()
 end
 
 function SWEP:SecondaryAttack()
-	local silenced = self:GetSilenced()
-
-	if silenced then
-		self.Primary.Sound = "Weapon_USP.Single"
-		self:SendWeaponAnim(ACT_VM_DETACH_SILENCER)
-		self:SetSilenced(false)
-	else
-		self.Primary.Sound = "Weapon_USP.SilencedShot"
-		self:SendWeaponAnim(ACT_VM_ATTACH_SILENCER)
-		self:SetSilenced(true)
-	end
+	local silenced = not self:GetSilenced()
+	self.Primary.Tracer = silenced and 0 or nil
+	self.Primary.Sound = silenced and "Weapon_USP.SilencedShot" or "Weapon_USP.Single"
+	self:SendWeaponAnim(silenced and ACT_VM_ATTACH_SILENCER or ACT_VM_DETACH_SILENCER)
+	self:SetSilenced(silenced)
 
 	local time = CurTime() + self:SequenceDuration()
 	self:SetNextPrimaryFire(time)
@@ -51,8 +45,14 @@ end
 
 function SWEP:ShootEffects()
 	local owner = self:GetOwner()
-	self:SendWeaponAnim(self:GetSilenced() and ACT_VM_PRIMARYATTACK_SILENCED or ACT_VM_PRIMARYATTACK)
-	owner:MuzzleFlash()
+
+	if self:GetSilenced() then
+		self:SendWeaponAnim(ACT_VM_PRIMARYATTACK_SILENCED)
+	else
+		self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
+		owner:MuzzleFlash()
+	end
+
 	owner:SetAnimation(PLAYER_ATTACK1)
 end
 
@@ -67,6 +67,14 @@ end
 
 if CLIENT then
 	killicon.AddFont("weapon_usp", "css_sweps_killicons", "a", Color(255, 80, 0), 0.4)
+
+	function SWEP:FireAnimationEvent(pos, ang, event, options)
+		if self:GetSilenced() and event == 5001 or event == 5003 then
+			return true
+		end
+
+		return BaseClass.FireAnimationEvent(self, pos, ang, event, options)
+	end
 
 	function SWEP:DrawWorldModel(flags)
 		if self:GetSilenced() then self:SetModel("models/weapons/w_pist_usp_silencer.mdl") end
