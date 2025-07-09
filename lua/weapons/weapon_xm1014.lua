@@ -18,7 +18,7 @@ SWEP.Primary.NumShots = 6
 SWEP.Primary.Delay = 0.25
 SWEP.Primary.ClipSize = 7
 SWEP.Primary.DefaultClip = 32
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "Buckshot"
 
 SWEP.Primary.Cone = 0.062
