@@ -52,7 +52,7 @@ function SWEP:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer
 	owner:FireBullets({
 		Num = num_bullets,
 		Src = owner:GetShootPos(),
-		Dir = (owner:EyeAngles() + owner:GetViewPunchAngles()):Forward(),
+		Dir = owner:IsPlayer() and (owner:EyeAngles() + owner:GetViewPunchAngles()):Forward() or owner:GetAimVector(),
 		Spread = Vector(aimcone, aimcone, 0),
 		Tracer = tracer or 5,
 		Force = force or 1,
