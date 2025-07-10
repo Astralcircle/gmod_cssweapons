@@ -23,10 +23,7 @@ SWEP.Primary.Ammo = "SMG1"
 SWEP.Primary.Tracer = 0
 
 SWEP.Primary.Cone = 0.02
-SWEP.Primary.Recoil = {}
-SWEP.Primary.Recoil.MinAng = Angle(0.25, -0.15, 0)
-SWEP.Primary.Recoil.MaxAng = Angle(0.35, 0.15, 0)
-SWEP.Primary.Recoil.Punch = 0.8
+SWEP.Primary.Recoil = {MinAng = Angle(0.25, -0.15, 0), MaxAng = Angle(0.35, 0.15, 0)}
 
 function SWEP:ShootEffects()
 	local owner = self:GetOwner()

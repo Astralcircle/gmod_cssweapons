@@ -22,10 +22,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "AR2"
 
 SWEP.Primary.Cone = 0.01
-SWEP.Primary.Recoil = {}
-SWEP.Primary.Recoil.MinAng = Angle(0.5, -0.15, 0)
-SWEP.Primary.Recoil.MaxAng = Angle(0.65, 0.15, 0)
-SWEP.Primary.Recoil.Punch = 0.8
+SWEP.Primary.Recoil = {MinAng = Angle(0.5, -0.15, 0), MaxAng = Angle(0.65, 0.15, 0)}
 
 function SWEP:SetupDataTables()
 	self:NetworkVar("Bool", 0, "Silenced")

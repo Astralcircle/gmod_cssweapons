@@ -22,10 +22,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "AR2"
 
 SWEP.Primary.Cone = 0.0125
-SWEP.Primary.Recoil = {}
-SWEP.Primary.Recoil.MinAng = Angle(0.5, -0.15, 0)
-SWEP.Primary.Recoil.MaxAng = Angle(0.6, 0.15, 0)
-SWEP.Primary.Recoil.Punch = 1
+SWEP.Primary.Recoil = {MinAng = Angle(0.5, -0.15, 0), MaxAng = Angle(0.6, 0.15, 0)}
 
 if CLIENT then
 	killicon.AddFont("weapon_galil", "css_sweps_killicons", "v", Color(255, 80, 0), 0.3)

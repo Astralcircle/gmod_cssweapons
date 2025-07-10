@@ -22,10 +22,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "SMG1"
 
 SWEP.Primary.Cone = 0.025
-SWEP.Primary.Recoil = {}
-SWEP.Primary.Recoil.MinAng = Angle(0.25, -0.2, 0)
-SWEP.Primary.Recoil.MaxAng = Angle(0.35, 0.2, 0)
-SWEP.Primary.Recoil.Punch = 0.8
+SWEP.Primary.Recoil = {MinAng = Angle(0.25, -0.2, 0), MaxAng = Angle(0.35, 0.2, 0)}
 
 if CLIENT then
 	killicon.AddFont("weapon_mac10", "css_sweps_killicons", "l", Color(255, 80, 0), 0.5)

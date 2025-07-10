@@ -24,10 +24,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "XBowBolt"
 
 SWEP.Primary.Cone = 0.001
-SWEP.Primary.Recoil = {}
-SWEP.Primary.Recoil.MinAng = Angle(1, -0.4, 0)
-SWEP.Primary.Recoil.MaxAng = Angle(1.5, 0.4, 0)
-SWEP.Primary.Recoil.Punch = 0.8
+SWEP.Primary.Recoil = {MinAng = Angle(1, -0.4, 0), Angle(1.5, 0.4, 0)}
 
 if CLIENT then
 	killicon.AddFont("weapon_awp", "css_sweps_killicons", "r", Color(255, 80, 0), 0.3)
