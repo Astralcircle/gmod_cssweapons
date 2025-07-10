@@ -30,6 +30,10 @@ function SWEP:Initialize()
 	self:SetHoldType(self.HoldType)
 end
 
+function SWEP:CanBePickedUpByNPCs()
+	return true
+end
+
 SWEP.Primary.Sound = "Weapon_AR2.Single"
 SWEP.Primary.Damage = 10
 SWEP.Primary.NumShots = 1
