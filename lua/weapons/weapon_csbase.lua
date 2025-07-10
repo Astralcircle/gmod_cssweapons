@@ -83,13 +83,7 @@ function SWEP:PrimaryAttack()
 	if owner:IsPlayer() then
 		local recoil = primary.Recoil
 		local seed = owner:GetCurrentCommand():CommandNumber()
-		local x, y = -util.SharedRandom(seed, recoil.MinAng.p, recoil.MaxAng.p), util.SharedRandom(seed, recoil.MinAng.y, recoil.MaxAng.y)
-
-		if CLIENT and IsFirstTimePredicted() then
-			owner:SetEyeAngles(owner:EyeAngles() + Angle(x * recoil.Punch, y * recoil.Punch, 0))
-		end
-
-		owner:ViewPunch(Angle(x, y, 0))
+		owner:ViewPunch(Angle(-util.SharedRandom(seed, recoil.MinAng.p, recoil.MaxAng.p), util.SharedRandom(seed, recoil.MinAng.y, recoil.MaxAng.y), 0))
 	end
 end
 
