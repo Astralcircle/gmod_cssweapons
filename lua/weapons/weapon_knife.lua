@@ -31,14 +31,22 @@ SWEP.Primary.Ammo = "none"
 
 function SWEP:DoHit(secondary)
 	local owner = self:GetOwner()
-	owner:LagCompensation(true)
-
 	local shootpos = owner:GetShootPos()
-	local trace = util.TraceLine({
+	local tracedata = {
 		start = shootpos,
 		endpos = shootpos + owner:GetAimVector() * 48,
 		filter = owner
-	})
+	}
+
+	owner:LagCompensation(true)
+
+	local trace = util.TraceLine(tracedata)
+
+	if not trace.Hit then
+		tracedata.mins = Vector(-16, -16, -18)
+		tracedata.maxs = Vector(16, 16, 18)
+		trace = util.TraceHull(tracedata)
+	end
 
 	owner:LagCompensation(false)
 	owner:SetAnimation(PLAYER_ATTACK1)
@@ -60,7 +68,7 @@ function SWEP:DoHit(secondary)
 			util.Effect("Impact", effect, false)
 		end
 
-		if IsValid(ent) then
+		if ent:IsValid() then
 			local damage = secondary and 65 or 20
 
 			if ent:IsPlayer() or ent:IsNPC() then
