@@ -33,11 +33,10 @@ function SWEP:DoHit(secondary)
 	local owner = self:GetOwner()
 	owner:LagCompensation(true)
 
-	local eyepos = owner:EyePos()
-
+	local shootpos = owner:GetShootPos()
 	local trace = util.TraceLine({
-		start = eyepos,
-		endpos = eyepos + owner:GetAimVector() * 48,
+		start = shootpos,
+		endpos = shootpos + owner:GetAimVector() * 48,
 		filter = owner
 	})
 
