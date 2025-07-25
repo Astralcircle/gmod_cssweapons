@@ -35,7 +35,7 @@ function SWEP:SecondaryAttack()
 	self:SendWeaponAnim(silenced and ACT_VM_ATTACH_SILENCER or ACT_VM_DETACH_SILENCER)
 	self:SetSilenced(silenced)
 
-	local time = CurTime() + self:SequenceDuration()
+	local time = CurTime() + 3
 	self:SetNextPrimaryFire(time)
 	self:SetNextSecondaryFire(time)
 end
