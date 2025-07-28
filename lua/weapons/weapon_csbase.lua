@@ -52,6 +52,7 @@ SWEP.m_WeaponDeploySpeed = 1
 
 function SWEP:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer)
 	local owner = self:GetOwner()
+	self:ShootEffects()
 
 	owner:FireBullets({
 		Num = num_bullets,
@@ -65,8 +66,6 @@ function SWEP:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer
 		Attacker = owner,
 		Inflictor = self
 	})
-
-	self:ShootEffects()
 end
 
 function SWEP:PrimaryAttack()
