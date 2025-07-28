@@ -25,41 +25,45 @@ SWEP.Primary.Cone = 0.0125
 SWEP.Primary.Recoil = {MinAng = Angle(0.275, -0.125, 0), MaxAng = Angle(0.325, 0.125, 0)}
 
 function SWEP:SetupDataTables()
-	self:NetworkVar("Int", 0, "BurstIndex")
+	self:NetworkVar("Bool", 0, "BurstMode")
+	self:NetworkVar("Int", 0, "BurstShotsRemaining")
 end
 
 function SWEP:PrimaryAttack()
+	if self:GetBurstMode() then
+		self.Primary.Delay = 0.075
+		self:SetBurstShotsRemaining(2)
+	else
+		self.Primary.Delay = 0.09
+	end
+
 	BaseClass.PrimaryAttack(self)
+end
 
-	local burstindex = self:GetBurstIndex()
+function SWEP:Think()
+	if self:GetBurstMode() then
+		local shotsremaining = self:GetBurstShotsRemaining()
 
-	if burstindex > 0 then
-		burstindex = burstindex + 1
+		if shotsremaining > 0 and self:GetNextPrimaryFire() <= CurTime() then
+			shotsremaining = shotsremaining - 1
+			self:SetBurstShotsRemaining(shotsremaining)
+			BaseClass.PrimaryAttack(self)
 
-		if burstindex > 3 then
-			self:SetNextPrimaryFire(CurTime() + 0.4)
-			burstindex = 1
+			if shotsremaining == 0 then
+				self:SetNextPrimaryFire(CurTime() + 0.55)
+			end
 		end
-
-		self:SetBurstIndex(burstindex)
 	end
 end
 
-function SWEP:SecondaryAttack()
-	local burst = self:GetBurstIndex() == 0
-	self:EmitSound("weapons/smg1/switch_single.wav")
-	self.Primary.Delay = burst and 60 / 888 or 60 / 666
-	self:SetBurstIndex(burst and 1 or 0)
-end
-
-function SWEP:Deploy()
-	self:SetBurstIndex(self:GetBurstIndex() > 0 and 1 or 0)
-	return BaseClass.Deploy(self)
-end
-
 function SWEP:Reload()
-	self:SetBurstIndex(self:GetBurstIndex() > 0 and 1 or 0)
+	self:SetBurstShotsRemaining(0)
 	return BaseClass.Reload(self)
+end
+
+function SWEP:SecondaryAttack()
+	self:EmitSound("weapons/smg1/switch_single.wav")
+	self:SetBurstMode(not self:GetBurstMode())
 end
 
 if CLIENT then
