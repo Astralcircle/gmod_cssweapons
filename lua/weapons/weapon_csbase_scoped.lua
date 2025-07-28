@@ -8,7 +8,6 @@ function SWEP:SetupDataTables()
 end
 
 function SWEP:SecondaryAttack()
-	local owner = self:GetOwner()
 	local index = self:GetScopeIndex() + 1
 	local scale = self.ScopeZoom[index]
 
