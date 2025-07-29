@@ -17,7 +17,9 @@ function SWEP:SecondaryAttack()
 		self:SetScopeIndex(0)
 	end
 
-	self:EmitSound("Default.Zoom")
+	if self.UseScope then
+		self:EmitSound("Default.Zoom")
+	end
 end
 
 function SWEP:Deploy()
