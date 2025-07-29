@@ -38,8 +38,7 @@ if CLIENT then
 	local fov_desired = GetConVar("fov_desired")
 
 	function SWEP:AdjustMouseSensitivity()
-		local owner = self:GetOwner()
-		return owner:GetFOV() / fov_desired:GetFloat()
+		return self:GetOwner():GetFOV() / fov_desired:GetFloat()
 	end
 
 	function SWEP:PreDrawViewModel()
@@ -50,27 +49,21 @@ if CLIENT then
 
 	function SWEP:DoDrawCrosshair(x, y)
 		if self:GetScopeIndex() > 0 and self.UseScope then
-			local screenW = ScrW()
-			local screenH = ScrH()
-
-			local h = screenH
-			local w = (4 / 3) * h
-
-			local dw = (screenW - w) * 0.5
-
-			local midX = screenW * 0.5
-			local midY = screenH * 0.5
+			local scrw, scrh = ScrW(), ScrH()
+			local midx, midy = scrw * 0.5, scrh * 0.5
 
 			surface.SetMaterial(scope)
 			surface.SetDrawColor(0, 0, 0)
+			surface.DrawLine(0, midy, scrw, midy)
+			surface.DrawLine(midx, 0, midx, scrh)
 
-			surface.DrawLine(0, midY, screenW, midY)
-			surface.DrawLine(midX, 0, midX, screenH)
+			local w = (4 / 3) * scrh
+			local dw = (scrw - w) * 0.5
 
-			surface.DrawRect(0, 0, dw, h)
-			surface.DrawRect(w + dw, 0, dw, h)
+			surface.DrawRect(0, 0, dw, scrh)
+			surface.DrawRect(w + dw, 0, dw, scrh)
+			surface.DrawTexturedRect(dw, 0, w, scrh)
 
-			surface.DrawTexturedRect(dw, 0, w, h)
 			return true
 		end
 	end
