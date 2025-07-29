@@ -50,10 +50,15 @@ function SWEP:Think()
 			BaseClass.PrimaryAttack(self)
 
 			if shotsremaining == 0 then
-				self:SetNextPrimaryFire(CurTime() + 0.55)
+				self:SetNextPrimaryFire(CurTime() + 0.4)
 			end
 		end
 	end
+end
+
+function SWEP:Deploy()
+	self:SetBurstShotsRemaining(0)
+	return BaseClass.Deploy(self)
 end
 
 function SWEP:Reload()
