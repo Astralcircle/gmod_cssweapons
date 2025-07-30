@@ -36,6 +36,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
+	local silenced = not self:GetSilenced()
 	self:SendWeaponAnim(silenced and ACT_VM_ATTACH_SILENCER or ACT_VM_DETACH_SILENCER)
 	self:SetSilenced(silenced)
 
