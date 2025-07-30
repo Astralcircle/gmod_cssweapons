@@ -12,7 +12,7 @@ SWEP.ViewModel = "models/weapons/cstrike/c_rif_aug.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_aug.mdl"
 SWEP.HoldType = "smg"
 
-SWEP.ScopeZoom = {3}
+SWEP.ScopeZoom = {1.63}
 SWEP.UseScope = false
 SWEP.Primary.Sound = "Weapon_AUG.Single"
 SWEP.Primary.Damage = 32

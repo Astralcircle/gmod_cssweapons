@@ -12,7 +12,7 @@ SWEP.ViewModel = "models/weapons/cstrike/c_rif_sg552.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_sg552.mdl"
 SWEP.HoldType = "ar2"
 
-SWEP.ScopeZoom = {3}
+SWEP.ScopeZoom = {1.63}
 SWEP.UseScope = false
 SWEP.Primary.Sound = "Weapon_SG552.Single"
 SWEP.Primary.Damage = 33
