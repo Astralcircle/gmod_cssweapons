@@ -28,10 +28,15 @@ function SWEP:SetupDataTables()
 	self:NetworkVar("Bool", 0, "Silenced")
 end
 
-function SWEP:SecondaryAttack()
-	local silenced = not self:GetSilenced()
+function SWEP:PrimaryAttack()
+	local silenced = self:GetSilenced()
 	self.Primary.Tracer = silenced and 0 or nil
 	self.Primary.Sound = silenced and "Weapon_USP.SilencedShot" or "Weapon_USP.Single"
+	return BaseClass.PrimaryAttack(self)
+end
+
+function SWEP:SecondaryAttack()
+	local silenced = not self:GetSilenced()
 	self:SendWeaponAnim(silenced and ACT_VM_ATTACH_SILENCER or ACT_VM_DETACH_SILENCER)
 	self:SetSilenced(silenced)
 
