@@ -23,6 +23,7 @@ SWEP.Primary.Ammo = "AR2"
 
 SWEP.Primary.Cone = 0.0125
 SWEP.Primary.Recoil = {MinAng = Angle(0.275, -0.125, 0), MaxAng = Angle(0.325, 0.125, 0)}
+SWEP.NPCBurstData = {Min = 2, Max = 5, Delay = SWEP.Primary.Delay}
 
 function SWEP:SetupDataTables()
 	self:NetworkVar("Bool", 0, "BurstMode")

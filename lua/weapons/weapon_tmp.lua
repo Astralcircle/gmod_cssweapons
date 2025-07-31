@@ -24,6 +24,7 @@ SWEP.Primary.Tracer = 0
 
 SWEP.Primary.Cone = 0.02
 SWEP.Primary.Recoil = {MinAng = Angle(0.25, -0.15, 0), MaxAng = Angle(0.35, 0.15, 0)}
+SWEP.NPCBurstData = {Min = 5, Max = 10, Delay = SWEP.Primary.Delay}
 
 function SWEP:ShootEffects()
 	local owner = self:GetOwner()

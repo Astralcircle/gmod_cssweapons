@@ -23,6 +23,7 @@ SWEP.Primary.Ammo = "Buckshot"
 
 SWEP.Primary.Cone = 0.125
 SWEP.Primary.Recoil = {Angle(1, -0.35, 0), Angle(1.5, 0.35, 0)}
+SWEP.NPCBurstData = {Min = 1, Max = 1, Delay = SWEP.Primary.Delay}
 
 if CLIENT then
 	killicon.AddFont("weapon_m3", "css_sweps_killicons", "k", Color(255, 80, 0), 0.2)

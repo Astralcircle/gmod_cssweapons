@@ -23,6 +23,7 @@ SWEP.Primary.Ammo = "Pistol"
 
 SWEP.Primary.Cone = 0.018
 SWEP.Primary.Recoil = {MinAng = Angle(0.7, -0.4, 0), MaxAng = Angle(0.9, 0.4, 0)}
+SWEP.NPCBurstData = {Min = 2, Max = 2, Delay = SWEP.Primary.Delay * 2}
 
 function SWEP:ShootEffects()
 	local owner = self:GetOwner()

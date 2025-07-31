@@ -30,8 +30,15 @@ function SWEP:Initialize()
 	self:SetHoldType(self.HoldType)
 end
 
-function SWEP:CanBePickedUpByNPCs()
-	return true
+if SERVER then
+	function SWEP:GetNPCBurstSettings()
+		local burstdata = self.NPCBurstData
+		return burstdata.Min, burstdata.Max, burstdata.Delay
+	end
+
+	function SWEP:CanBePickedUpByNPCs()
+		return true
+	end
 end
 
 SWEP.Primary.Sound = "Weapon_AR2.Single"
