@@ -13,7 +13,7 @@ SWEP.WorldModel = "models/weapons/w_pist_elite.mdl"
 SWEP.HoldType = "duel"
 
 SWEP.Primary.Sound = "Weapon_ELITE.Single"
-SWEP.Primary.Damage = 28
+SWEP.Primary.Damage = 45
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.12
 SWEP.Primary.ClipSize = 30
@@ -22,7 +22,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "Pistol"
 
 SWEP.Primary.Cone = 0.018
-SWEP.Primary.Recoil = {MinAng = Angle(0.7, -0.4, 0), MaxAng = Angle(1.0, 0.5, 0)}
+SWEP.Primary.Recoil = {MinAng = Angle(0.7, -0.4, 0), MaxAng = Angle(0.9, 0.4, 0)}
 SWEP.NPCBurstData = {Min = 2, Max = 2, Delay = SWEP.Primary.Delay * 2}
 
 function SWEP:ShootEffects()
