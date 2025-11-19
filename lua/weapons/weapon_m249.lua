@@ -13,7 +13,7 @@ SWEP.WorldModel = "models/weapons/w_mach_m249para.mdl"
 SWEP.HoldType = "ar2"
 
 SWEP.Primary.Sound = "Weapon_M249.Single"
-SWEP.Primary.Damage = 25
+SWEP.Primary.Damage = 28
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.08
 SWEP.Primary.ClipSize = 100
