@@ -23,7 +23,7 @@ SWEP.Primary.DefaultClip = 10
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "XBowBolt"
 
-SWEP.Primary.Cone = 0.001
+SWEP.Primary.Cone = 0
 SWEP.Primary.Recoil = {MinAng = Angle(1, -0.4, 0), Angle(1.5, 0.4, 0)}
 SWEP.NPCBurstData = {Min = 1, Max = 1, Delay = SWEP.Primary.Delay}
 
