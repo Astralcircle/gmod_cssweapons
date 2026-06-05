@@ -37,10 +37,8 @@ function SWEP:TranslateFOV(fov)
 end
 
 if CLIENT then
-	local fov_desired = GetConVar("fov_desired")
-
-	function SWEP:AdjustMouseSensitivity()
-		return self:GetOwner():GetFOV() / fov_desired:GetFloat()
+	function SWEP:AdjustMouseSensitivity(default_sensitivity, local_fov, default_fov)
+		return local_fov / default_fov
 	end
 
 	function SWEP:PreDrawViewModel()
