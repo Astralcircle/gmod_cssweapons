@@ -11,6 +11,13 @@ if CLIENT then
 		size = math.min(ScreenScale(55), 165)
 	})
 
+	surface.CreateFont("css_sweps_icons_background", {
+		font = "cs",
+		size = math.min(ScreenScale(55), 165),
+		blursize = ScreenScaleH(4),
+        scanlines = ScreenScaleH(2)
+	})
+
 	surface.CreateFont("css_sweps_killicons", {
 		font = "csd",
 		size = 64,
@@ -18,7 +25,9 @@ if CLIENT then
 	})
 
 	function SWEP:DrawWeaponSelection(x, y, w, h, alpha)
-		draw.SimpleText(self.IconSymbol or "", "css_sweps_icons", x + w / 2, y + h / 2, Color(255, 255, 50, alpha), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		local symbol, text_x, text_y, color = self.IconSymbol or "", x + w / 2, y + h / 2, Color(255, 230, 0, alpha)
+		draw.SimpleText(symbol, "css_sweps_icons_background", text_x, text_y, color, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw.SimpleText(symbol, "css_sweps_icons", text_x, text_y, color, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	end
 end
 
